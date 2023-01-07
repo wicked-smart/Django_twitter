@@ -1,0 +1,6 @@
+# created by virtualenv automatically
+*.pyc
+db.slqite3
+bin/
+lib/
+pyenv.cfg
