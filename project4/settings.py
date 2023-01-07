@@ -139,4 +139,4 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'network/media')
 MEDIA_URL = '/media/'
 
-CSRF_TRUSTED_ORIGINS = ['djangotwitter-production.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://djangotwitter-production.up.railway.app']
