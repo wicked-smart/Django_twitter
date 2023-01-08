@@ -77,22 +77,22 @@ WSGI_APPLICATION = 'project4.wsgi.application'
 
 
 # DEVELOPEMENT_MODE flag to switch between Production and Developement specific settings
-DEVELOPMENT_MODE = False
+#DEVELOPMENT_MODE = False
 
 # if in DEVELOPEMENT_MODE , use SQLite3 else use postrgess (when deploying to Digital Ocean )
-if DEVELOPMENT_MODE is True:
-    DATABASES = {
-        "default": {
-            "ENGINE": "django.db.backends.sqlite3",
-            "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
-        }
+#if DEVELOPMENT_MODE is True:
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
     }
-elif len(sys.argv) > 0 and sys.argv[1] != 'collectstatic':
-    if os.getenv("DATABASE_URL", None) is None:
-        raise Exception("DATABASE_URL environment variable not defined")
-    DATABASES = {
-        "default": dj_database_url.parse(os.environ.get("DATABASE_URL")),
-    }
+}
+#elif len(sys.argv) > 0 and sys.argv[1] != 'collectstatic':
+ #   if os.getenv("DATABASE_URL", None) is None:
+  #      raise Exception("DATABASE_URL environment variable not defined")
+  #  DATABASES = {
+  #      "default": dj_database_url.parse(os.environ.get("DATABASE_URL")),
+  #  }
 
 
 AUTH_USER_MODEL = "network.User"
