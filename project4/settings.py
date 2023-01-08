@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'project4.wsgi.application'
 
 
 # DEVELOPEMENT_MODE flag to switch between Production and Developement specific settings
-DEVELOPMENT_MODE = True 
+DEVELOPMENT_MODE = False
 
 # if in DEVELOPEMENT_MODE , use SQLite3 else use postrgess (when deploying to Digital Ocean )
 if DEVELOPMENT_MODE is True:
